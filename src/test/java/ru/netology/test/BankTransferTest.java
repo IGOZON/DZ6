@@ -39,7 +39,7 @@ public class BankTransferTest {
     }
 
     @Test
-    void dfsas() {
+    void transferFromSecondToFirst() {
         var amount = generateInvalidAmount(firstCardBalance);
         var expectedBalanceFirstCard = firstCardBalance - amount;
         var expectedBalanceSecondCard = secondCardBalance + amount;
@@ -54,7 +54,7 @@ public class BankTransferTest {
     }
 
     @Test
-    void dfdssas() {
+    void transferFromFirstToSecond() {
         var amount = generateInvalidAmount(secondCardBalance);
         var expectedBalanceFirstCard = firstCardBalance + amount;
         var expectedBalanceSecondCard = secondCardBalance - amount;
