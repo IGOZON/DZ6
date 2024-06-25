@@ -40,7 +40,7 @@ public class BankTransferTest {
 
     @Test
     void transferFromSecondToFirst() {
-        var amount = generateInvalidAmount(firstCardBalance);
+        var amount = generateValidAmount(firstCardBalance);
         var expectedBalanceFirstCard = firstCardBalance - amount;
         var expectedBalanceSecondCard = secondCardBalance + amount;
         var transferPage = dashboardPage.selectCardToTransder(secondCardInfo);
@@ -55,7 +55,7 @@ public class BankTransferTest {
 
     @Test
     void transferFromFirstToSecond() {
-        var amount = generateInvalidAmount(secondCardBalance);
+        var amount = generateValidAmount(secondCardBalance);
         var expectedBalanceFirstCard = firstCardBalance + amount;
         var expectedBalanceSecondCard = secondCardBalance - amount;
         var transferPage = dashboardPage.selectCardToTransder(firstCardInfo);
